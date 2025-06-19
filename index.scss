@@ -1,78 +1,168 @@
-#Big_div{
-text-align: center;
-    #start_button{
-        width: 5.3rem;
+#Big_div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    #start_button {
+        width: 6rem;
         height: 2.3rem;
         background-color: green;
-        font-family: serif;
-        font-style: bold;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         color: white;
         border-radius: 0.2em;
         margin-top: 1.2rem;
+        &:hover{
+            background-color: limegreen;
+            color: black;
+            transition: 1s;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
     }
-    
-    #wrap_all {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 2rem;
 
-        #wrap_boxes{
+    #wrap_all {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 2rem;
+
+        #wrap_boxes {
             width: fit-content;
             // margin: 5rem auto;
             padding: 1rem;
-
-            background-color: gainsboro;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            background-color: #f8f9fa;
             display: flex;
             flex-direction: column;
             gap: 1rem;
             align-items: center;
-            margin-top: 2rem;
-            
+            // margin-top: 2rem;
 
             .box_line {
-            display: flex;
-            gap: 1rem;
+                display: flex;
+                gap: 1rem;
 
                 .box {
-                width: 13rem;
-                height: 13rem;
-                font-weight: bold;
-                font-size: 1.2rem;
-                border-radius: 0.8rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: green;
+                    width: 10rem;
+                    height: 10rem;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    border-radius: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // color: green;
                 }
             }
-        
         }
         #info_panel {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            // margin-top: 2rem;
         }
 
-        #clock_box, #control_guide {
-        background-color: #eaffea;
-        border-radius: 1rem;
-        padding: 1rem 2rem;
-        text-align: center;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
+        #clock_box,
+        #control_guide {
+            background-color: #eaffea;
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            font-family: "Roboto", sans-serif;
+            &#control_guide {
+                background-color: whitesmoke !important;
+            }
 
-        .clock {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #000;
-        }
+            .clock {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #000;
+            }
 
-        .keys {
-        font-size: 1.2rem;
-        line-height: 2;
+            .keys {
+                font-size: 1.2rem;
+                line-height: 2;
+                display: flex;
+                gap: 0.2rem;
+            }
         }
     }
+    .arrow_keys {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.2rem;
+        border-radius: 1rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        gap: 1rem;
+        background-color: gainsboro;
+    }
+    #wrap_guide {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        margin-top: 0.8rem;
+    }
+
+    #history_box {
+        width: 90%;
+        height: 8rem;
+        background-color: #f8f9fa;
+        margin-top: 2rem;
+        padding: 0.2rem;
+
+        #his_tittle {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .history_table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+
+            th {
+                background-color: #e9ecef;
+                padding: 0.75rem;
+                font-weight: bold;
+                border:1px dotted grey  ;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f1f3f5;
+            }
+        }
+    }
+    
 }
+
+
+
+// CSS dùng trong js
+// .custom_stop{
+//     background-color: red;
+//     color: white;
+// }
+
+
+// #btn_test{
+//     background-color: red;
+//     color: white;
+//     border-radius: 2rem;
+//     width: 8rem;
+// }
+
+// .testing{
+//     background-color: cornflowerblue;
+// }
