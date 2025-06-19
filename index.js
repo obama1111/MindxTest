@@ -19,7 +19,7 @@ pressbtn.onclick = function start_clicked(){
         pressbtn.innerHTML = "Bắt đầu"
         flag = true
         clearInterval(time_start)
-        document.querySelector(".clock").innerHTML= "00:00";
+        document.querySelector(".clock").innerHTML= "00:00";    
         alert("game reset")
 
     }
